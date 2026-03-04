@@ -83,6 +83,8 @@ FAILED SU to root wazuh-user on tty1
 unix_chkpwd: password check failed for user (root)
 pam_unix(su:auth): authentication failure
 
+<img width="806" height="603" alt="image" src="https://github.com/user-attachments/assets/49e591aa-508e-44d4-b801-ee8eb0b662fc" />
+
 Esses eventos indicam que um usuário tentou autenticar como root, mas falhou durante o processo de verificação da senha.
 
 ## 🔬 Investigação Técnica
