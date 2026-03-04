@@ -109,7 +109,7 @@ Senha incorreta → evento de log gerado
 
 ### 🔹 2. Processamento pelo Wazuh
 
-Os logs do sistema foram coletados automaticamente pelo Wazuh Agent.
+Os logs do sistema foram coletados automaticamente pelo Wazuh Agent na Dashboard.
 
 O Wazuh analisou os eventos e aplicou regras de detecção, enriquecendo o evento com informações adicionais.
 
@@ -133,7 +133,11 @@ Severidade do alerta
 
 Técnica de ataque associada
 
+<img width="1600" height="831" alt="image" src="https://github.com/user-attachments/assets/ba7a974a-fc1e-40d1-9c08-1d9e2b5b5dc4" />
+
 Observação: Como o evento foi classificado com rule level 5, ele foi categorizado pelo Wazuh como um alerta de baixa severidade (Low severity). Ainda assim, eventos desse tipo podem indicar tentativas iniciais de autenticação inválida ou atividades de password guessing, sendo relevantes para análise em contexto de segurança.
+
+<img width="1353" height="255" alt="image" src="https://github.com/user-attachments/assets/ee81fc08-8301-4f45-8158-ed19c475a366" />
 
 ## ⚖️ Interpretação do Evento
 
