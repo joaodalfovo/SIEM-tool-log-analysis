@@ -80,7 +80,9 @@ sudo journalctl | grep -i fail
 Exemplo de logs identificados:
 
 FAILED SU to root wazuh-user on tty1
+
 unix_chkpwd: password check failed for user (root)
+
 pam_unix(su:auth): authentication failure
 
 <img width="806" height="603" alt="image" src="https://github.com/user-attachments/assets/49e591aa-508e-44d4-b801-ee8eb0b662fc" />
@@ -116,9 +118,13 @@ O Wazuh analisou os eventos e aplicou regras de detecção, enriquecendo o event
 Campos relevantes observados:
 
 rule.description: User missed the password to change UID
+
 rule.level: 5
+
 rule.mitre.technique: Password Guessing
+
 data.srcuser: wazuh-user
+
 data.dstuser: root
 
 Esses campos indicam:
@@ -132,12 +138,6 @@ Tipo de evento
 Severidade do alerta
 
 Técnica de ataque associada
-
-<img width="1600" height="831" alt="image" src="https://github.com/user-attachments/assets/ba7a974a-fc1e-40d1-9c08-1d9e2b5b5dc4" />
-
-Observação: Como o evento foi classificado com rule level 5, ele foi categorizado pelo Wazuh como um alerta de baixa severidade (Low severity). Ainda assim, eventos desse tipo podem indicar tentativas iniciais de autenticação inválida ou atividades de password guessing, sendo relevantes para análise em contexto de segurança.
-
-<img width="1353" height="255" alt="image" src="https://github.com/user-attachments/assets/ee81fc08-8301-4f45-8158-ed19c475a366" />
 
 ## ⚖️ Interpretação do Evento
 
@@ -160,11 +160,20 @@ Os eventos foram visualizados no Wazuh Dashboard, utilizando a interface Discove
 Eventos identificados incluíram:
 
 FAILED SU attempts
+
 Password check failed
+
 Authentication failure
+
 Privilege escalation attempt
 
+<img width="1600" height="831" alt="image" src="https://github.com/user-attachments/assets/ba7a974a-fc1e-40d1-9c08-1d9e2b5b5dc4" />
+
 O Wazuh correlacionou os logs do sistema e classificou os eventos utilizando regras internas e mapeamento MITRE ATT&CK.
+
+Observação: Como o evento foi classificado com rule level 5, ele foi categorizado pelo Wazuh como um alerta de baixa severidade (Low severity). Ainda assim, eventos desse tipo podem indicar tentativas iniciais de autenticação inválida ou atividades de password guessing, sendo relevantes para análise em contexto de segurança.
+
+<img width="1353" height="255" alt="image" src="https://github.com/user-attachments/assets/ee81fc08-8301-4f45-8158-ed19c475a366" />
 
 ## 🧾 Conclusão
 
